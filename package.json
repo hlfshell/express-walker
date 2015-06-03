@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.12.4",
+    "promise": "^7.0.1",
+    "walk": "^2.3.9"
+  }
+}
