@@ -1,6 +1,2 @@
 
-module.exports = function(){
-	
-	return require('./lib/require-walker.js');
-	
-}
+module.exports = require('./lib/express-walker.js')();
