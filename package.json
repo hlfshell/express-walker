@@ -1,7 +1,30 @@
 {
+  "name": "express-walker",
+  "version": "1.0.0",
+  "description": "A router loader for express apps.",
+  "main": "index.js",
   "dependencies": {
     "express": "^4.12.4",
-    "promise": "^7.0.1",
-    "walk": "^2.3.9"
-  }
+    "walk": "^2.3.9",
+    "promise": "^7.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hlfshell/express-walker.git"
+  },
+  "keywords": [
+    "router",
+    "express",
+    "directory"
+  ],
+  "author": "Keith Chester <kchester@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hlfshell/express-walker/issues"
+  },
+  "homepage": "https://github.com/hlfshell/express-walker"
 }
