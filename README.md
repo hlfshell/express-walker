@@ -36,7 +36,7 @@ var walker = new require('express-walker')(
 ```
 
 ### Your typical router
-...doStuff.js
+_doStuff.js_
 ```
 var express = require('express');
 
