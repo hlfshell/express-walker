@@ -1,7 +1,7 @@
 # Express Walker
 This is a helper module to allow easily loading express routers for APIs. Routes are determined by the directory structure and filenames you use. Also, it allows the passing of parameters in any fashion you wish to each router as its loaded, allowing the easy passing of models and other variables throughout your project. 
 
-##Example
+## Example
 
 ### Your index.js
 ```
@@ -85,10 +85,10 @@ var walker = new require('express-walker')(
     {
       app: app,
       directory: './targetDir',
-      root: 'targetAPIRoot'
+      root: 'targetAPIRoot',
+      args: [list, of, arguments, to, pass] 
     }
   )
-  .pass(list, of, arguments, to, pass)
   .load(function(){
     app.listen(3000);
   });
