@@ -1,6 +1,11 @@
 # Express Walker
 This is a helper module to allow easily loading express routers for APIs. Routes are determined by the directory structure and filenames you use. Also, it allows the passing of parameters in any fashion you wish to each router as its loaded, allowing the easy passing of models and other variables throughout your project. 
 
+## Installation
+```
+npm install express-walker
+```
+
 ## Example
 
 ### Your index.js
@@ -59,8 +64,8 @@ _Note the return_
 ```
   /api/admin/users
   /api/admin/sales
-  /register/
-  /doStuff/
+  /api/register/
+  /api/doStuff/
 ```
 
 ## Documentation
@@ -94,3 +99,19 @@ var walker = new require('express-walker')(
   });
 
 ```
+
+### Parameters
+
+#### Directory
+The directory you wish to walk through. All sub-directories are also traversed.
+
+#### Root
+The root of the API to be added as ap refix to each router when its added. If a router had an endpoint of '/test/something' A root of '/' would not add anything as a prefix - the resulting route would be '/test/something'. A root of '/api/' would result in an endpoint of '/api/test/something'.
+
+#### app
+The express app you've created - it's used to add each router to the app.
+
+#### args
+Optional. When added in the constructor, it's an array of values or variables. when using the .pass() method, it's called with as many arguments as you wish (without the array). You can have as many or as little as you wish.
+
+These arguments are passed, in the same order, to each router on require-time.
