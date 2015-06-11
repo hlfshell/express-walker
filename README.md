@@ -2,14 +2,14 @@
 This is a helper module to allow easily loading express routers for APIs. Routes are determined by the directory structure and filenames you use. Also, it allows the passing of parameters in any fashion you wish to each router as its loaded, allowing the easy passing of models and other variables throughout your project. 
 
 ## Installation
-```
+```sh
 npm install express-walker
 ```
 
 ## Example
 
 ### Your index.js
-```
+```js
 var app = require('express')();
 var walker = new require('express-walker')(
     {
@@ -24,7 +24,6 @@ var walker = new require('express-walker')(
     //All routers have been loaded into the express app now.
     app.listen(3000);
   });
-
 ```
 
 ### Your directory structure:
@@ -42,7 +41,7 @@ var walker = new require('express-walker')(
 
 ### Your typical router
 _doStuff.js_
-```
+```js
 var express = require('express');
 
 module.exports = function(app, models, yetAnotherArgument){
@@ -61,7 +60,7 @@ _Note the return_
 
 ### And, finally, your resulting API paths:
 
-```
+```no-highlight
   /api/admin/users
   /api/admin/sales
   /api/register/
@@ -72,7 +71,7 @@ _Note the return_
 
 ### Setup
 
-```
+```js
 var walker = new require('express-walker')();
 walker
   .directory('./targetDir')
@@ -97,7 +96,6 @@ var walker = new require('express-walker')(
   .load(function(){
     app.listen(3000);
   });
-
 ```
 
 ### Parameters
