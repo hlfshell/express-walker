@@ -11,7 +11,7 @@ npm install express-walker
 ### Your index.js
 ```js
 var app = require('express')();
-var walker = new require('express-walker')(
+var walker = new (require('express-walker'))(
     {
       directory: './api',
       app: app,
@@ -72,7 +72,7 @@ _Note the return_
 ### Setup
 
 ```js
-var walker = new require('express-walker')();
+var walker = new (require('express-walker'))();
 walker
   .directory('./targetDir')
   .root('targetAPIRoot')
@@ -85,7 +85,7 @@ walker
   
 //OR
 
-var walker = new require('express-walker')(
+var walker = new (require('express-walker'))(
     {
       app: app,
       directory: './targetDir',
