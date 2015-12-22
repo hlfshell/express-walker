@@ -13,9 +13,9 @@ npm install express-walker
 var app = require('express')();
 var walker = new (require('express-walker'))(
     {
-      directory: './api',
+      directory: './api/v0.1/',
       app: app,
-      root: '/api/v0.1/'
+      root: '/api/'
     }
   )
   .pass(app, models, yetAnotherArgument)
